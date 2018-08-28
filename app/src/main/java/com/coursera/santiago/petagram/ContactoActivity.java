@@ -49,13 +49,13 @@ public class ContactoActivity extends AppCompatActivity {
                 props.setProperty("mail.smtp.quitwait", "false");
 
                 Session session = Session.getInstance(props, null);
-                String userName = "";//Colocar email Aquí
-                String passWord = "";//Colocar password aquí
+                String userName = "courseratestpetagram@gmail.com";//Colocar email Aquí
+                String passWord = "Coursera123456";//Colocar password aquí
                 ContactoActivity.this.finish();
 
                 try{
                     MimeMessage msg = new MimeMessage(session);
-                    msg.setFrom("");//Colocar email Aquí
+                    msg.setFrom("courseratestpetagram@gmail.com");//Colocar email Aquí
                     msg.setRecipients(Message.RecipientType.TO, tietCorreo.getText().toString());
                     msg.setSubject("Petagram - Comentario de "+tietNombre.getText().toString());
                     msg.setText(tietMensaje.getText().toString());
